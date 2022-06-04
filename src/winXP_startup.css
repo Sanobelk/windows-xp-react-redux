@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+.WinXP_Startup_Container {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.WinXP_Startup_Container_Top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.WinXP_Logo_Text {
+  font-family: "Roboto";
+  font-weight: 100;
+  font-size: 24pt;
+}
+
+.WinXP_Logo_Text .WindowsTxt {
+  font-weight: 400;
+  font-size: 48pt;
+  letter-spacing: 2px;
+}
+
+.WinXP_Logo_Text .WindowsTxtXP {
+  font-weight: 400;
+  font-size: 36pt;
+  font-weight: bold;
+  color: tomato;
+  position: relative;
+  bottom: 20px;
+}
+
+.WinXP_Logo_Img img {
+  position: relative;
+  bottom: 220px;
+  left: 150px;
+  width: 150px;
+  margin-bottom: -150px;
+}
+
+.WinXP_Loading_Bar {
+  border: 3px solid silver;
+  border-radius: 5px;
+  width: 200px;
+  overflow: hidden;
+}
+
+.WinXP_Loading_Bar_Bundle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  left: -50px;
+  -webkit-animation-name: loading;
+          animation-name: loading;
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.WinXP_Loading_Bar_Box {
+  width: 15px;
+  height: 15px;
+  margin: 3px 1px;
+  background: cadetblue;
+}
+
+/*ANIMATIONS*/
+@-webkit-keyframes loading {
+  from {
+    left: -50px;
+  }
+  to {
+    left: 220px;
+  }
+}
+@keyframes loading {
+  from {
+    left: -50px;
+  }
+  to {
+    left: 220px;
+  }
+}
+/*# sourceMappingURL=winXP_startup.css.map */

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+.WinXP_Startup_Container{
+    background-color:black;
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    color:white;
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+    
+}
+
+.WinXP_Startup_Container_Top{
+    //background-color:lightgreen;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.WinXP_Logo_Text{
+    //background-color:pink;
+
+    font-family:"Roboto";
+    font-weight:100;
+    font-size:24pt;
+    
+    .WindowsTxt{
+        font-weight:400;
+        font-size:48pt;
+        letter-spacing:2px;
+    }
+    .WindowsTxtXP{
+        font-weight:400;
+        font-size:36pt;
+        font-weight:bold;
+        color:tomato;
+        position:relative;
+        bottom:20px;
+    }
+}
+
+.WinXP_Logo_Img{
+    img{
+        position:relative;
+        bottom:220px;
+        left:150px;
+        width:150px;
+        //background-color:plum;
+        margin-bottom:-150px;
+    }
+}
+
+.WinXP_Loading_Bar{
+    border:3px solid silver;
+    border-radius:5px;
+    width:200px;
+    overflow:hidden;
+}
+
+.WinXP_Loading_Bar_Bundle{
+    display:flex;
+    position:relative;
+    left:-50px;
+    animation-name: loading;
+    animation-duration: 3.5s;
+    animation-delay:2s;
+    animation-iteration-count:infinite;
+    
+}
+
+.WinXP_Loading_Bar_Box{
+    width:15px;
+    height:15px;
+    margin:3px 1px;
+    background: cadetblue;
+}
+
+/*ANIMATIONS*/
+
+@keyframes loading {
+    from { left: -50px; };
+    to { left: 220px; };
+}
+
+
+
+    
