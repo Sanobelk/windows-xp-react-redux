@@ -89,7 +89,9 @@
   width: 15px;
   height: 15px;
   margin: 3px 1px;
-  background: cadetblue;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0066ff), color-stop(30%), color-stop(white), to(#0066ff));
+  background: linear-gradient(to bottom, #0066ff, 30%, white, #0066ff);
+  border-radius: 2px;
 }
 
 /*ANIMATIONS*/
