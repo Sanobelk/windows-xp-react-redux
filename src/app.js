@@ -1,5 +1,6 @@
 import React from "react"
 import {WinXP_Startup} from "./winXP_startup"; //WIN XP STARTUP PAGE
+import {WinXP_Login} from "./winXP_login"; // WIN XP LOGIN PAGE
 
 class App extends React.Component{
     constructor(props){
@@ -12,7 +13,7 @@ class App extends React.Component{
     render(){
 
         //mimick Windows loading for a few seconds.
-        setTimeout(() => { 
+        /*setTimeout(() => { 
         if(this.state.xp_loaded == false){
             this.setState({
                 ...this.state,
@@ -27,8 +28,10 @@ class App extends React.Component{
                 <WinXP_Startup/>
             )
         }else{
-            return <h1>Windows has loaded</h1>
-        }
+            return <WinXP_Login/>
+        }*/
+
+        return <WinXP_Login/>
     }
 }
 

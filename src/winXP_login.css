@@ -1,0 +1,64 @@
+.WinXP_Login_Container {
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+.WinXP_Login_Container .Login_Top_Bar {
+  background-color: #00309c;
+  height: 7%;
+  border-bottom: 3px solid white;
+  color: white;
+  display: block;
+}
+
+.WinXP_Login_Container .Login_Middle_Section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #5a7edc;
+  height: 83%;
+  color: white;
+}
+
+.WinXP_Login_Container .Login_Middle_Section--left {
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 200px 20px 200px 0px;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.WinXP_Login_Container .Login_Middle_Section--left img {
+  width: 150px;
+  display: block;
+}
+
+.WinXP_Login_Container .Login_Middle_Section--right {
+  width: 60%;
+  background-color: plum;
+}
+
+.WinXP_Login_Container .Login_Bottom_Bar {
+  background: -webkit-gradient(linear, left top, right top, from(#3732ac), to(#00309c));
+  background: linear-gradient(to right, #3732ac, #00309c);
+  height: 10%;
+  color: white;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=winXP_login.css.map */
