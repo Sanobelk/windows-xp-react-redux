@@ -24,20 +24,30 @@
 }
 
 .WinXP_Login_Container .Login_Middle_Section--left {
+  font-family: arial;
   border-right: 2px solid rgba(255, 255, 255, 0.2);
-  padding: 200px 20px 200px 0px;
+  padding: 100px 20px 100px 0px;
   width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: right;
 }
 
 .WinXP_Login_Container .Login_Middle_Section--left img {
   width: 150px;
   display: block;
+  margin-bottom: 10px;
 }
 
 .WinXP_Login_Container .Login_Middle_Section--right {
@@ -46,6 +56,7 @@
 }
 
 .WinXP_Login_Container .Login_Bottom_Bar {
+  font-family: arial;
   background: -webkit-gradient(linear, left top, right top, from(#3732ac), to(#00309c));
   background: linear-gradient(to right, #3732ac, #00309c);
   height: 10%;
@@ -54,11 +65,80 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-top: 3px solid gold;
+}
+
+.WinXP_Login_Container .Login_Bottom_Bar--left {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14pt;
+}
+
+.WinXP_Login_Container .Login_Bottom_Bar--left img {
+  padding: 0px 30px;
+}
+
+.WinXP_Login_Container .Login_Bottom_Bar--right {
+  font-size: 14pt;
+  padding-right: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .WinXP_Login_Container .Login_Bottom_Bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .WinXP_Login_Container .Login_Bottom_Bar--left, .WinXP_Login_Container .Login_Bottom_Bar--right {
+    font-size: 10pt;
+    padding: 0;
+  }
+  .WinXP_Login_Container .Login_Bottom_Bar--left img {
+    margin: 0;
+    padding: 0px 5px 0px 5px;
+  }
+  .WinXP_Login_Container .Login_Bottom_Bar--left p {
+    display: none;
+  }
+  .WinXP_Login_Container .Login_Bottom_Bar--right p {
+    padding: 3px;
+    text-align: right;
+    max-width: 300px;
+    min-width: 250px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .WinXP_Login_Container .Login_Middle_Section--left img {
+    width: 100px;
+  }
 }
 /*# sourceMappingURL=winXP_login.css.map */

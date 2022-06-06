@@ -91,4 +91,24 @@
 
 
 
-    
+@media screen and (max-width:380px){
+    .WinXP_Logo_Text{
+        font-size:20pt;
+        
+        .WindowsTxt{
+        font-size:36pt;
+        }
+        .WindowsTxtXP{
+            font-size:30pt;
+        }
+    }
+    .WinXP_Logo_Img{
+    img{
+        width:100px;
+        left:120px;
+
+    }
+}
+}
+
+

@@ -1,4 +1,5 @@
 .WinXP_Login_Container{
+
     overflow-y:hidden;
     height:100vh;
     .Login_Top_Bar{
@@ -17,15 +18,21 @@
         color:white;
 
         &--left{
+            font-family:arial;
             border-right:2px solid rgba(255,255,255,0.2);
-            padding:200px 20px 200px 0px;
+            padding:100px 20px 100px 0px;
             width:40%;
             display:flex;
-            justify-content:flex-end;
+            flex-direction:column;
+            align-items:flex-end;
+            justify-content:center;
+            
+            text-align:right;
 
             img{
                 width:150px;
                 display:block;
+                margin-bottom:10px;
             }
         }
         &--right{
@@ -34,12 +41,79 @@
         }
     }
     .Login_Bottom_Bar{
+        font-family:arial;
         background:linear-gradient(to right, #3732ac, #00309c);
         height:10%;
         color:white;
         display:block;
         display:flex;
+        flex-wrap:wrap;
+        flex-direction:row;
         justify-content:space-between;
         align-items:center;
+        border-top:3px solid gold;
+        &--left{
+            cursor:pointer;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:14pt;
+            img{
+                padding:0px 30px;
+            }
+        }
+        &--right{
+            font-size:14pt;
+            padding-right:30px;
+        }
+    }
+}
+
+@media screen and (max-width: 900px){
+    .WinXP_Login_Container{
+        .Login_Bottom_Bar{
+            display:flex;
+            flex-direction:row;
+            flex-wrap:nowrap;
+            justify-content:space-around;
+            &--left, &--right{
+                font-size:10pt;
+                
+                padding:0;
+            }
+            &--left{
+                
+                img{
+                    margin:0;
+                    padding:0px 5px 0px 5px;
+                }
+                p{
+                    display:none;
+                }
+            }
+            &--right{
+                //background-color:pink;
+                
+                p{
+                    padding:3px;
+                    text-align:right;
+                    max-width:300px;
+                    min-width:250px;
+                }
+            }
+            
+        }
+        
+    }
+}
+@media screen and (max-width:450px){
+    .WinXP_Login_Container{
+        .Login_Middle_Section{
+            &--left{
+                img{
+                    width:100px;
+                }
+            }
+        }
     }
 }

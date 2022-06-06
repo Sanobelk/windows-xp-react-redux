@@ -8,12 +8,22 @@ class App extends React.Component{
         this.state = {
             xp_loaded : false
         }
+        this.restartPC = this.restartPC.bind(this);
+        this.startingUp = this.startingUp.bind(this);
     }
-    
-    render(){
 
-        //mimick Windows loading for a few seconds.
-        /*setTimeout(() => { 
+    restartPC = () => {
+        console.log(this.state);
+        this.setState({
+            ...this.state,
+            xp_loaded : false,
+        })
+        console.log(this.state);
+        
+    }
+
+    startingUp = () =>{
+        setTimeout(() => { 
         if(this.state.xp_loaded == false){
             this.setState({
                 ...this.state,
@@ -22,16 +32,21 @@ class App extends React.Component{
             console.log('XP LOADED');
             }
         }, 10000);
+    }
+    
+    render(){
+        
 
         if(!this.state.xp_loaded){
+            setTimeout(()=>{
+                this.startingUp(); //starts up XP
+            })
             return (
                 <WinXP_Startup/>
             )
         }else{
-            return <WinXP_Login/>
-        }*/
-
-        return <WinXP_Login/>
+            return <WinXP_Login restartPC={this.restartPC}/>
+        }
     }
 }
 

@@ -111,4 +111,20 @@
     left: 220px;
   }
 }
+
+@media screen and (max-width: 380px) {
+  .WinXP_Logo_Text {
+    font-size: 20pt;
+  }
+  .WinXP_Logo_Text .WindowsTxt {
+    font-size: 36pt;
+  }
+  .WinXP_Logo_Text .WindowsTxtXP {
+    font-size: 30pt;
+  }
+  .WinXP_Logo_Img img {
+    width: 100px;
+    left: 120px;
+  }
+}
 /*# sourceMappingURL=winXP_startup.css.map */
