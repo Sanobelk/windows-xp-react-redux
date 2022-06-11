@@ -5,9 +5,25 @@ import {LoginScreenUser} from './winXP_login_user'
 class WinXP_Login extends React.Component{
     constructor(props){
         super(props);
+
+        this.handleLogin = this.handleLogin.bind(this);
     }
+
+    handleLogin = () => {
+        document.getElementById('LoginScreenClickUsernameText').textContent = 'Logging In.'
+        let audio = new Audio('../sounds/login_sound.mp3');
+        audio.play();
+        setTimeout(()=>{
+            this.props.userLoggedIn(); //App.js userLoggedIn function
+            console.log('user logged in');
+        },5000) //how long before user logs in
+    }
+
+
+
+
     render(){
-        console.log(this.props.userLoggedIn);
+        
         return(
             <div className="WinXP_Login_Container">
             
@@ -18,10 +34,10 @@ class WinXP_Login extends React.Component{
                 <div className="Login_Middle_Section">
                     <div className="Login_Middle_Section--left">
                         <img src="images/windows-xp-logo-login.png"/><br/>
-                        To begin, click your username.
+                        <span id="LoginScreenClickUsernameText">To begin, click your username.</span>
                     </div>
                     <div className="Login_Middle_Section--right">
-                        <LoginScreenUser userLoggedIn={this.props.userLoggedIn}/>
+                        <LoginScreenUser handleLogin={this.handleLogin}/>
                     </div>
                 </div>
 

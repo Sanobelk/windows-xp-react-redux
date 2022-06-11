@@ -169,6 +169,7 @@
 }
 
 .LoginScreenUser--Container .LoginScreenUser--Middle--AccName {
+  cursor: pointer;
   font-size: 14pt;
 }
 
@@ -261,7 +262,7 @@
     min-width: 100px;
   }
   .LoginScreenUser--Container .LoginScreenUser--Middle--Input {
-    width: 100px;
+    width: 80%;
   }
   .LoginScreenUser--Container .LoginScreenUser--Right img {
     top: 12px;

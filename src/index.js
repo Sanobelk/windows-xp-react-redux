@@ -6,6 +6,7 @@ import {App} from "./app"
 import './index.css';
 import './winXP_startup.css';
 import './winXP_login.css';
+import './winxp_desktop.css'; //winXP_desktop.css will not work for some strange reason.
 
 
 const ROOT = document.getElementById('root');

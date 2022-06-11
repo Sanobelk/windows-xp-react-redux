@@ -1,0 +1,73 @@
+.WinXP_Desktop_Container {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.WinXP_Desktop_Container .DesktopArea {
+  background-image: url("../public/images/xp_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  z-index: 1;
+}
+
+.WinXP_Desktop_Container .Taskbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  z-index: 100;
+  height: 5%;
+  background-color: #245edc;
+  border-top: 3px solid #4993e6;
+}
+
+.WinXP_Desktop_Container .Taskbar--StartMenuButton {
+  width: 150px;
+  height: 100%;
+  border-top: 3px solid #3a7c3b;
+  background-color: #45a445;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom-right-radius: 10px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+.WinXP_Desktop_Container .Taskbar--StartMenuButton:hover {
+  cursor: pointer;
+  background-color: #257725;
+}
+
+.WinXP_Desktop_Container .Taskbar--RightArea {
+  font-family: "Roboto";
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 2px solid #16aef0;
+  border-left: 2px solid darkblue;
+  background-color: #1290e8;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 150px;
+}
+/*# sourceMappingURL=winxp_desktop.css.map */

@@ -1,12 +1,13 @@
 import React from "react"
 import {WinXP_Startup} from "./winXP_startup"; //WIN XP STARTUP PAGE
 import {WinXP_Login} from "./winXP_login"; // WIN XP LOGIN PAGE
+import {WinXP_Desktop} from "./WinXP_Desktop" //WIN XP DESKTOP 
 
 class App extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            xp_loaded : false,
+            xp_loaded : true,
             userLoggedIn : false,
         }
         this.restartPC = this.restartPC.bind(this);
@@ -57,7 +58,7 @@ class App extends React.Component{
         }
 
         if (this.state.xp_loaded && this.state.userLoggedIn){
-            return <h1>User Logged In</h1>
+            return <WinXP_Desktop />
         }
         
     }
