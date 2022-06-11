@@ -37,7 +37,7 @@ class App extends React.Component{
     render(){
         
 
-        if(!this.state.xp_loaded){
+        if(this.state.xp_loaded){
             setTimeout(()=>{
                 this.startingUp(); //starts up XP
             })

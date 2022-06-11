@@ -37,7 +37,7 @@
         }
         &--right{
             width:60%;
-            background-color:plum;
+            
         }
     }
     .Login_Bottom_Bar{
@@ -116,4 +116,67 @@
             }
         }
     }
+}
+
+.LoginScreenUser--Container{
+    width:400px;
+    
+    padding:5px;
+    border-radius:10px;
+    
+    display:flex;
+    align-items:center;
+    margin-left:40px;
+    font-family:'Roboto';
+    
+    .LoginScreenUser--Left{
+        img{
+            margin-left:5px;
+            display:block;
+            width:60px;
+            border:2px solid white;
+            border-radius:5px;
+            cursor:pointer;
+        }
+    
+    }
+
+    .LoginScreenUser--Middle{
+        margin-left:15px;
+        &--AccName{
+            font-size:14pt;
+        }
+        &--TypePass{
+            font-size:10pt;
+            font-weight:100;
+        }
+        &--Input{
+            position:relative;
+            top:15px;
+            font-size:12pt;
+            padding:3px 7px;
+            border:1px solid white;
+            border-radius: 5px;
+            &:focus{
+                border-color:white;
+            }
+        }
+    }
+    .LoginScreenUser--Right{
+        img{
+            position:relative;
+            top:36px;
+            left:5px;
+            margin:5px;
+            width:30px;
+            cursor:pointer;
+        }
+    }
+}
+
+.LoginScreenUser--Active{
+    background:linear-gradient(to right, #00309c, #5a7edc);
+}
+.LoginScreenUserAvatar--Active{
+    border:2px solid gold !important;
 }

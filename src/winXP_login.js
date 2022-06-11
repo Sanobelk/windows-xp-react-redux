@@ -1,4 +1,5 @@
 import React from "react"
+import {LoginScreenUser} from './winXP_login_user'
 
 
 class WinXP_Login extends React.Component{
@@ -19,7 +20,7 @@ class WinXP_Login extends React.Component{
                         To begin, click your username.
                     </div>
                     <div className="Login_Middle_Section--right">
-                        <p>Users components go here.</p>
+                        <LoginScreenUser />
                     </div>
                 </div>
 

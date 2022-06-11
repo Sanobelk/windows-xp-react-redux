@@ -52,7 +52,6 @@
 
 .WinXP_Login_Container .Login_Middle_Section--right {
   width: 60%;
-  background-color: plum;
 }
 
 .WinXP_Login_Container .Login_Bottom_Bar {
@@ -140,5 +139,72 @@
   .WinXP_Login_Container .Login_Middle_Section--left img {
     width: 100px;
   }
+}
+
+.LoginScreenUser--Container {
+  width: 400px;
+  padding: 5px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 40px;
+  font-family: 'Roboto';
+}
+
+.LoginScreenUser--Container .LoginScreenUser--Left img {
+  margin-left: 5px;
+  display: block;
+  width: 60px;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.LoginScreenUser--Container .LoginScreenUser--Middle {
+  margin-left: 15px;
+}
+
+.LoginScreenUser--Container .LoginScreenUser--Middle--AccName {
+  font-size: 14pt;
+}
+
+.LoginScreenUser--Container .LoginScreenUser--Middle--TypePass {
+  font-size: 10pt;
+  font-weight: 100;
+}
+
+.LoginScreenUser--Container .LoginScreenUser--Middle--Input {
+  position: relative;
+  top: 15px;
+  font-size: 12pt;
+  padding: 3px 7px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.LoginScreenUser--Container .LoginScreenUser--Middle--Input:focus {
+  border-color: white;
+}
+
+.LoginScreenUser--Container .LoginScreenUser--Right img {
+  position: relative;
+  top: 36px;
+  left: 5px;
+  margin: 5px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.LoginScreenUser--Active {
+  background: -webkit-gradient(linear, left top, right top, from(#00309c), to(#5a7edc));
+  background: linear-gradient(to right, #00309c, #5a7edc);
+}
+
+.LoginScreenUserAvatar--Active {
+  border: 2px solid gold !important;
 }
 /*# sourceMappingURL=winXP_login.css.map */
