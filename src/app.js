@@ -6,10 +6,12 @@ class App extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            xp_loaded : false
+            xp_loaded : false,
+            userLoggedIn : false,
         }
         this.restartPC = this.restartPC.bind(this);
         this.startingUp = this.startingUp.bind(this);
+        this.userLoggedIn = this.userLoggedIn.bind(this);
     }
 
     restartPC = () => {
@@ -29,24 +31,35 @@ class App extends React.Component{
                 ...this.state,
                 xp_loaded : true
             })
-            console.log('XP LOADED');
             }
         }, 10000);
     }
-    
+
+    userLoggedIn = () =>{
+        console.log('user logged in');
+        this.setState({
+            ...this.state,
+            userLoggedIn : true,
+        })
+        console.log(this.state);
+    }
     render(){
         
 
-        if(this.state.xp_loaded){
-            setTimeout(()=>{
+        if(!this.state.xp_loaded){
                 this.startingUp(); //starts up XP
-            })
             return (
                 <WinXP_Startup/>
             )
-        }else{
-            return <WinXP_Login restartPC={this.restartPC}/>
         }
+        if(this.state.xp_loaded && !this.state.userLoggedIn){
+            return <WinXP_Login restartPC={this.restartPC} userLoggedIn ={this.userLoggedIn}/>
+        }
+
+        if (this.state.xp_loaded && this.state.userLoggedIn){
+            return <h1>User Logged In</h1>
+        }
+        
     }
 }
 

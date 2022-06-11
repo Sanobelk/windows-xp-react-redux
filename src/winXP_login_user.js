@@ -20,6 +20,7 @@ class LoginScreenUser extends React.Component{
     }
     
     render(){
+        
         return (
             <div className="LoginScreenUser--Container">
                 <div className="LoginScreenUser--Left">
@@ -35,7 +36,13 @@ class LoginScreenUser extends React.Component{
                 <div className="LoginScreenUser--Right">
                     {this.state.userClicked== true && 
                     <>
-                        <img src="/images/icons/login_arrow.png" className="LoginScreenUser--Button" />
+                        <img src="/images/icons/login_arrow.png" className="LoginScreenUser--Button" onClick={
+                            
+                           ()=>{
+                               this.props.userLoggedIn();
+                           }
+                        
+                        } />
                         <img src="/images/icons/close_box.png" className="LoginScreenUser--Button" onClick={
                             ()=>{
                                 this.setState({

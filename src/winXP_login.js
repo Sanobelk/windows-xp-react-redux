@@ -7,6 +7,7 @@ class WinXP_Login extends React.Component{
         super(props);
     }
     render(){
+        console.log(this.props.userLoggedIn);
         return(
             <div className="WinXP_Login_Container">
             
@@ -20,7 +21,7 @@ class WinXP_Login extends React.Component{
                         To begin, click your username.
                     </div>
                     <div className="Login_Middle_Section--right">
-                        <LoginScreenUser />
+                        <LoginScreenUser userLoggedIn={this.props.userLoggedIn}/>
                     </div>
                 </div>
 
