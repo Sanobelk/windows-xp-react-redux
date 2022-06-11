@@ -6,7 +6,7 @@ class App extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            xp_loaded : false,
+            xp_loaded : true,
             userLoggedIn : false,
         }
         this.restartPC = this.restartPC.bind(this);

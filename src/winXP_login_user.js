@@ -24,7 +24,7 @@ class LoginScreenUser extends React.Component{
         return (
             <div className="LoginScreenUser--Container">
                 <div className="LoginScreenUser--Left">
-                    <img id="LoginScreenUserAvatar" src="/images/icons/avatar.png" onClick={this.userClickAvatar}/>
+                    <img id="LoginScreenUserAvatar" src="/images/icons/chess.webp" onClick={this.userClickAvatar}/>
                 </div>
                 <div className="LoginScreenUser--Middle">
                     <p className="LoginScreenUser--Middle--AccName">Admin</p>

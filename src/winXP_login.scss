@@ -172,11 +172,67 @@
             cursor:pointer;
         }
     }
+    
 }
 
-.LoginScreenUser--Active{
-    background:linear-gradient(to right, #00309c, #5a7edc);
+@media screen and (min-width: 401px){
+    .LoginScreenUser--Active{
+        background:linear-gradient(to right, #00309c, #5a7edc);
+    }
+    .LoginScreenUserAvatar--Active{
+        border:2px solid gold !important;
+    }
 }
-.LoginScreenUserAvatar--Active{
-    border:2px solid gold !important;
+
+
+
+@media screen and (max-width:750px){
+    .LoginScreenUser--Container{
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        width:200px;
+        margin:auto;
+        .LoginScreenUser--Middle{
+            text-align:center;
+            margin:0;
+        }
+        .LoginScreenUser--Right{
+            img{
+                top:12px;
+            }
+        }
+        
+    }
+    .LoginScreenUser--Active{
+        background:linear-gradient(to bottom, #00309c, #5a7edc);
+    }
+    .LoginScreenUserAvatar--Active{
+        border:2px solid gold !important;
+    }
 }
+
+
+@media screen and (max-width:400px){
+    .LoginScreenUser--Container{
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        width:150px;
+        margin:auto;
+        .LoginScreenUser--Middle{
+            text-align:center;
+            margin:0;
+            min-width:100px;
+            &--Input{
+                width:100px;
+            }
+            }
+        .LoginScreenUser--Right{
+            img{
+                top:12px;
+            }
+        }
+    }
+}
+
