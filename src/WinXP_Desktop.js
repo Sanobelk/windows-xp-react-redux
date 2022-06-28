@@ -5,7 +5,7 @@ class WinXP_Desktop extends React.Component{
         super(props);
 
         this.state = {
-            
+            startMenu : true,
         }
     }
 
@@ -37,10 +37,10 @@ class WinXP_Desktop extends React.Component{
 
         /* immitation lag taskbar */
 
-        setTimeout(()=>{
+        /*setTimeout(()=>{
              document.querySelector('.DesktopArea').style.height="95%"; //because originally its 100%.
         },3000)
-       
+       */
 
 
         return (
@@ -64,7 +64,11 @@ class WinXP_Desktop extends React.Component{
                 
                 </div>
             </div>
-        
+            {this.state.startMenu &&
+                    <div className="startMenu">
+
+                    </div>
+                }
         </div>
 
         )

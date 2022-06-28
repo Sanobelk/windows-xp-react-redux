@@ -1,23 +1,31 @@
-.WinXP_Desktop_Container{
-    height:100%;
+html{
     overflow-y:hidden;
+}
+
+.WinXP_Desktop_Container{
+    height:100vh;
     
     .DesktopArea{
     background-image: url('../public/images/xp_background.jpg');
     background-repeat:no-repeat;
     background-size:cover;
     height:100%;
-    z-index:1;
+    z-index:0;
+    overflow-x:hidden;
+    overflow-y:hidden;
     }
     .Taskbar{
         display:flex;
         justify-content:space-between;
         align-items:center;
         color:white;
-        z-index:100;
-        height:5%;
+        z-index:101;
+        height:50px;
         background-color:#245edc;
         border-top:3px solid #4993e6;
+        position:absolute;
+        bottom:0;
+        width:100%;
         &--StartMenuButton{
             width:150px;
             height:100%;
@@ -46,5 +54,19 @@
             align-items:center;
             width:150px;
         }
+    }
+}
+
+.startMenu{
+    width:500px;
+    background:white;
+    height:600px;
+    position:absolute;
+    bottom:0px;
+}
+
+@media screen and (max-width:600px){
+    .startMenu{
+        width:75vw;
     }
 }
