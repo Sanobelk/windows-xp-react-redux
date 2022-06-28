@@ -5,7 +5,31 @@ class WinXP_Desktop extends React.Component{
         super(props);
 
         this.state = {
-            startMenu : true,
+            startMenu : false,
+            startMenuClicked : false,
+        }
+
+
+        this.toggleStartMenu = this.toggleStartMenu.bind(this);
+        this.checkMenuOpen = this.checkMenuOpen.bind(this);
+    }
+
+    toggleStartMenu = () => { //toggles start menu
+        
+        this.setState({
+            ...this.state,
+            startMenu : !this.state.startMenu,
+            startMenuClicked : true,
+        })
+    }
+
+    checkMenuOpen = () =>{ //if Menu is opened (and user clicks on desktop), close the menu.
+        if(this.state.startMenuClicked){
+            this.setState({
+                ...this.state,
+                startMenu : false,
+                startMenuClicked : false
+            })
         }
     }
 
@@ -46,12 +70,12 @@ class WinXP_Desktop extends React.Component{
         return (
         
         <div className="WinXP_Desktop_Container">
-            <div className="DesktopArea">
+            <div className="DesktopArea" onClick={this.checkMenuOpen}>
             
             
             </div>
             <div className="Taskbar">
-                <div className="Taskbar--StartMenuButton">START</div>
+                <div className="Taskbar--StartMenuButton" onClick={this.toggleStartMenu}>START</div>
                 <div className="Taskbar--MiddleArea"></div>
                 <div className="Taskbar--RightArea">
                 
