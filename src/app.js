@@ -20,6 +20,7 @@ class App extends React.Component{
         this.setState({
             ...this.state,
             xp_loaded : false,
+            userLoggedIn : false,
         })
         console.log(this.state);
         
@@ -58,7 +59,7 @@ class App extends React.Component{
         }
 
         if (this.state.xp_loaded && this.state.userLoggedIn){
-            return <WinXP_Desktop />
+            return <WinXP_Desktop restartPC={this.restartPC} />
         }
         
     }

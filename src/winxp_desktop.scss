@@ -63,6 +63,43 @@ html{
     height:600px;
     position:absolute;
     bottom:0px;
+    border-top-right-radius: 15px;
+    border-top-left-radius:15px;
+    &--Top{
+        height:80px;
+        background:linear-gradient(#285fda,#1290e8);
+        border-top-right-radius: 15px;
+        border-top-left-radius:15px;
+        display:flex;
+        align-items:center;
+        border-bottom:3px solid gold;
+        &--UserName{
+            color:white;
+            font-family:'Roboto';
+            font-size:24pt;
+            padding-left:50px;
+        }
+    }
+    &--Middle{
+        height:390px;
+        background:white;
+        display:flex;
+        width:100%;
+        
+        &--Left{
+            width:50%;
+        }
+        &--Right{
+            width:50%;
+            background:#d1e1f8;
+            border-left:#afafaf 2px solid;
+        }
+    }
+    &--Bottom{
+        height:80px;
+        background:linear-gradient(#285fda,#1290e8);
+        border-top:3px solid gold;
+    }
 }
 
 @media screen and (max-width:600px){

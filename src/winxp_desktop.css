@@ -85,6 +85,56 @@ html {
   height: 600px;
   position: absolute;
   bottom: 0px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.startMenu--Top {
+  height: 80px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#285fda), to(#1290e8));
+  background: linear-gradient(#285fda, #1290e8);
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 3px solid gold;
+}
+
+.startMenu--Top--UserName {
+  color: white;
+  font-family: 'Roboto';
+  font-size: 24pt;
+  padding-left: 50px;
+}
+
+.startMenu--Middle {
+  height: 390px;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.startMenu--Middle--Left {
+  width: 50%;
+}
+
+.startMenu--Middle--Right {
+  width: 50%;
+  background: #d1e1f8;
+  border-left: #afafaf 2px solid;
+}
+
+.startMenu--Bottom {
+  height: 80px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#285fda), to(#1290e8));
+  background: linear-gradient(#285fda, #1290e8);
+  border-top: 3px solid gold;
 }
 
 @media screen and (max-width: 600px) {

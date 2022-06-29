@@ -90,7 +90,14 @@ class WinXP_Desktop extends React.Component{
             </div>
             {this.state.startMenu &&
                     <div className="startMenu">
-
+                        <div className="startMenu--Top">
+                            <p className="startMenu--Top--UserName" onClick={this.props.restartPC}>Admin</p>
+                        </div>
+                        <div className="startMenu--Middle">
+                            <div className="startMenu--Middle--Left">left</div>
+                            <div className="startMenu--Middle--Right">right</div>
+                        </div>
+                        <div className="startMenu--Bottom"></div>
                     </div>
                 }
         </div>
