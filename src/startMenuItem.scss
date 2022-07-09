@@ -1,0 +1,15 @@
+.startMenuItem{
+    display:flex;
+    align-items:center;
+    &--Icon{
+        width:50px;
+    }
+    &--Title{
+        padding-left:10px;
+        font-family:'Roboto';
+    }
+    &:hover{
+        background-color:lightgray;
+        cursor:pointer;
+    }
+}

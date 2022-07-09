@@ -1,0 +1,23 @@
+.startMenuItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.startMenuItem--Icon {
+  width: 50px;
+}
+
+.startMenuItem--Title {
+  padding-left: 10px;
+  font-family: 'Roboto';
+}
+
+.startMenuItem:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+/*# sourceMappingURL=startMenuItem.css.map */

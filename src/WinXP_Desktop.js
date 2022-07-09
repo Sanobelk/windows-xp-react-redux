@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import {StartMenuItem} from './startMenuItem';
 
 class WinXP_Desktop extends React.Component{
     constructor(props){
@@ -18,6 +19,7 @@ class WinXP_Desktop extends React.Component{
         this.toggleStartMenu = this.toggleStartMenu.bind(this);
         this.checkMenuOpen = this.checkMenuOpen.bind(this);
         this.updateTime = this.updateTime.bind(this);
+        this.handleMenuClick = this.handleMenuClick.bind(this);
     }
 
     toggleStartMenu = () => { //toggles start menu
@@ -86,7 +88,6 @@ class WinXP_Desktop extends React.Component{
                     ampm,
                 }
             })
-            console.log(this.state);
         }
     }
 
@@ -94,6 +95,11 @@ class WinXP_Desktop extends React.Component{
         setInterval(()=>{
            this.updateTime(); 
         },1000)
+    }
+
+    handleMenuClick = function(){
+        this.checkMenuOpen();
+        console.log("itemclicked");
     }
 
     render(){
@@ -134,8 +140,12 @@ class WinXP_Desktop extends React.Component{
                         <div className="startMenu--Top">
                             <p className="startMenu--Top--UserName" onClick={this.props.restartPC}>Admin</p>
                         </div>
-                        <div className="startMenu--Middle" onClick={this.updateTime}>
-                            <div className="startMenu--Middle--Left">left</div>
+                        <div className="startMenu--Middle">
+                            <div className="startMenu--Middle--Left">   
+                                <StartMenuItem icon="/images/icons/people.png" title="About" action={this.handleMenuClick} action2="about"/>
+                                <StartMenuItem icon="/images/icons/resume.png" title="Resume" action={this.handleMenuClick}/>
+                                <StartMenuItem icon="/images/icons/windows.png" title="Other" action={this.handleMenuClick}/>
+                            </div>
                             <div className="startMenu--Middle--Right">right</div>
                         </div>
                         <div className="startMenu--Bottom"></div>

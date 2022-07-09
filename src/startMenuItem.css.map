@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAA;EACV,OAAO,EAAC,IAAI;EACZ,WAAW,EAAC,MAAM;CAYrB;;AAXI,AAAD,oBAAO,CAAA;EACH,KAAK,EAAC,IAAI;CACb;;AACA,AAAD,qBAAQ,CAAA;EACJ,YAAY,EAAC,IAAI;EACjB,WAAW,EAAC,QAAQ;CACvB;;AATL,AAUI,cAVU,AAUT,MAAM,CAAA;EACH,gBAAgB,EAAC,SAAS;EAC1B,MAAM,EAAC,OAAO;CACjB",
+    "sources": [
+        "startMenuItem.scss"
+    ],
+    "names": [],
+    "file": "startMenuItem.css"
+}
