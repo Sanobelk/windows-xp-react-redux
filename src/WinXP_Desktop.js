@@ -46,7 +46,6 @@ class WinXP_Desktop extends React.Component{
         let ampm;
         hour = date.getHours();
         minute = date.getMinutes();
-        console.log(hour % 12);
 
         /*SET AMPM*/
         if(hour > 12){
@@ -99,7 +98,13 @@ class WinXP_Desktop extends React.Component{
 
     render(){
 
-        
+        /*adding 0 in front of minute if its less than 10.*/
+        let minute = null;
+        if(this.state.time.minute > 10){
+            minute = this.state.time.minute
+        }else{
+            minute = '0' + this.state.time.minute;
+        }
 
 
         return (
@@ -116,7 +121,9 @@ class WinXP_Desktop extends React.Component{
                     <span id="timeClock">
                         <span id="timeClockHour">{this.state.time.hour}</span> 
                             : 
-                        <span id="timeClockMinute">{this.state.time.minute} </span>
+                        <span id="timeClockMinute">{
+                            minute
+                        } </span>
                         <span id="timeClockAMPM">{this.state.time.ampm}</span>
                     </span>
                 
