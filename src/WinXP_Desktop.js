@@ -1,3 +1,4 @@
+import { findAllByDisplayValue } from '@testing-library/react';
 import React from 'react';
 import {StartMenuItem} from './startMenuItem';
 
@@ -12,7 +13,10 @@ class WinXP_Desktop extends React.Component{
                 hour : null,
                 minute : null,
                 ampm : null,
-            }
+            },
+            about : false,
+            resume : false,
+            other : false,
         }
 
 
@@ -20,6 +24,9 @@ class WinXP_Desktop extends React.Component{
         this.checkMenuOpen = this.checkMenuOpen.bind(this);
         this.updateTime = this.updateTime.bind(this);
         this.handleMenuClick = this.handleMenuClick.bind(this);
+        this.openAbout = this.openAbout.bind(this);
+        this.openResume = this.openResume.bind(this);
+        this.openOther = this.openOther.bind(this);
     }
 
     toggleStartMenu = () => { //toggles start menu
@@ -29,6 +36,7 @@ class WinXP_Desktop extends React.Component{
             startMenu : !this.state.startMenu,
             startMenuClicked : true,
         })
+        console.log(this.state);
     }
 
     checkMenuOpen = () =>{ //if Menu is opened (and user clicks on desktop), close the menu.
@@ -39,6 +47,7 @@ class WinXP_Desktop extends React.Component{
                 startMenuClicked : false
             })
         }
+        console.log(this.state);
     }
 
     updateTime = () =>{
@@ -51,9 +60,9 @@ class WinXP_Desktop extends React.Component{
 
         /*SET AMPM*/
         if(hour > 12){
-            ampm = 'PM'
-        }else{
             ampm = 'AM'
+        }else if (hour <= 12){
+            ampm = 'PM'
         }
         /*CONVERT 24 HOUR INTO 12 HOUR TIME*/
         hour = hour % 12 || 12;
@@ -98,9 +107,31 @@ class WinXP_Desktop extends React.Component{
     }
 
     handleMenuClick = function(){
-        this.checkMenuOpen();
-        console.log("itemclicked");
+        this.toggleStartMenu();
     }
+
+    openAbout = function(){
+            this.setState({
+                ...this.state,
+                about : true,
+                startMenu : false,
+                startMenuClicked : false,
+            })}
+    openResume = function(){
+            this.setState({
+                ...this.state,
+                resume : true,
+                startMenu : false,
+                startMenuClicked : false,
+            })}
+
+    openOther = function(){
+            this.setState({
+                ...this.state,
+                other : true,
+                startMenu : false,
+                startMenuClicked : false,
+            })}
 
     render(){
 
@@ -142,11 +173,23 @@ class WinXP_Desktop extends React.Component{
                         </div>
                         <div className="startMenu--Middle">
                             <div className="startMenu--Middle--Left">   
-                                <StartMenuItem icon="/images/icons/people.png" title="About" action={this.handleMenuClick} action2="about"/>
+                                <button onClick={()=>{
+                                    this.openAbout();
+                                }}>
+                                    <StartMenuItem icon="/images/icons/people.png" title="About" />
+                                </button>
+                                <button onClick={()=>{
+                                    this.openResume();
+                                }}>
                                 <StartMenuItem icon="/images/icons/resume.png" title="Resume" action={this.handleMenuClick}/>
+                                </button>
+                                <button onClick={()=>{
+                                    this.openOther();
+                                }}>
                                 <StartMenuItem icon="/images/icons/windows.png" title="Other" action={this.handleMenuClick}/>
+                                </button>
                             </div>
-                            <div className="startMenu--Middle--Right">right</div>
+                            <div className="startMenu--Middle--Right" onClick={()=> console.log(this.state)}>right</div>
                         </div>
                         <div className="startMenu--Bottom"></div>
                     </div>

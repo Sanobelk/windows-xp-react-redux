@@ -9,15 +9,17 @@ class StartMenuItem extends React.Component{
         }
     }
 
-    closeMenu = this.props.action;
-    action = this.props.action2;
+    //closeMenu = this.props.action;
+
+
+    
 
     render(){
         return(
             <div className="startMenuItem" onClick={()=>{
-                console.log(this.action);
-                this.closeMenu();
-                }}>
+                //console.log(this.props.title);
+                //this.closeMenu();
+            }}>
                 <img className="startMenuItem--Icon" src={this.props.icon} />
                 <p className="startMenuItem--Title">{this.props.title}</p>
             </div>
