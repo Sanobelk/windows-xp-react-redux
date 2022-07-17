@@ -1,0 +1,28 @@
+.WinXP_Desktop_Window{
+    position:fixed;
+    top:50px;
+    left:50px;
+    width:800px;
+    height:500px;
+    background:white;
+    border:5px solid #285fda;
+    border-radius:5px;
+    display:block;
+    &--Topbar{
+        background-color: #285fda;
+        display:flex;
+        justify-content:space-between;
+        h2{
+            color:white;
+            font-family:'Roboto';
+            padding-left:5px;
+        }
+        .ControlButtons{
+            img{
+                width:25px;
+                padding:1px;
+                cursor:pointer;
+            }
+        }
+    }
+}

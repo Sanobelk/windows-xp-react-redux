@@ -1,6 +1,7 @@
 import { findAllByDisplayValue } from '@testing-library/react';
 import React from 'react';
 import {StartMenuItem} from './startMenuItem';
+import {About} from './About';
 
 class WinXP_Desktop extends React.Component{
     constructor(props){
@@ -27,6 +28,10 @@ class WinXP_Desktop extends React.Component{
         this.openAbout = this.openAbout.bind(this);
         this.openResume = this.openResume.bind(this);
         this.openOther = this.openOther.bind(this);
+        this.closeAbout = this.closeAbout.bind(this);
+        this.closeResume = this.closeResume.bind(this);
+        this.closeOther = this.closeOther.bind(this);
+        this.minimize = this.minimize.bind(this);
     }
 
     toggleStartMenu = () => { //toggles start menu
@@ -124,7 +129,6 @@ class WinXP_Desktop extends React.Component{
                 startMenu : false,
                 startMenuClicked : false,
             })}
-
     openOther = function(){
             this.setState({
                 ...this.state,
@@ -132,6 +136,30 @@ class WinXP_Desktop extends React.Component{
                 startMenu : false,
                 startMenuClicked : false,
             })}
+    closeAbout = function(){
+        this.setState({
+            ...this.state,
+            about : false
+        })
+    }
+    closeResume = function(){
+        this.setState({
+            ...this.state,
+            about : false
+        })
+    }
+    closeOther = function(){
+        this.setState({
+            ...this.state,
+            about : false
+        })
+    }
+
+    minimize = function(){
+        console.log('minimize');
+        let window = document.querySelector('.WinXP_Desktop_Window');
+        window.classList.toggle('hidden')
+    }
 
     render(){
 
@@ -147,12 +175,23 @@ class WinXP_Desktop extends React.Component{
         return (
         <div className="WinXP_Desktop_Container">
             <div className="DesktopArea" onClick={this.checkMenuOpen}>
+            {this.state.about && <About close={this.closeAbout} minimize={this.minimize}/>}
             
+
             
             </div>
             <div className="Taskbar">
                 <div className="Taskbar--StartMenuButton" onClick={this.toggleStartMenu}>START</div>
-                <div className="Taskbar--MiddleArea"></div>
+                
+                <div className="Taskbar--MiddleArea">
+                { this.state.about && 
+                    <div className="TaskBar--MiddleArea--OpenApp" onClick={this.minimize}>
+                    <img src="./images/icons/people.png"></img>
+                       About
+                    </div>
+                }
+                </div>
+               
                 <div className="Taskbar--RightArea">
                 
                     <span id="timeClock">
@@ -173,21 +212,25 @@ class WinXP_Desktop extends React.Component{
                         </div>
                         <div className="startMenu--Middle">
                             <div className="startMenu--Middle--Left">   
+
                                 <button onClick={()=>{
                                     this.openAbout();
                                 }}>
                                     <StartMenuItem icon="/images/icons/people.png" title="About" />
                                 </button>
+
                                 <button onClick={()=>{
                                     this.openResume();
                                 }}>
                                 <StartMenuItem icon="/images/icons/resume.png" title="Resume" action={this.handleMenuClick}/>
                                 </button>
+
                                 <button onClick={()=>{
                                     this.openOther();
                                 }}>
                                 <StartMenuItem icon="/images/icons/windows.png" title="Other" action={this.handleMenuClick}/>
                                 </button>
+
                             </div>
                             <div className="startMenu--Middle--Right" onClick={()=> console.log(this.state)}>right</div>
                         </div>
