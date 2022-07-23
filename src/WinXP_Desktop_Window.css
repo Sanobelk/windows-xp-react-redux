@@ -31,4 +31,67 @@
   padding: 1px;
   cursor: pointer;
 }
+
+.modal-window {
+  background: white;
+  color: #285fda;
+  width: 25%;
+  padding: 30px;
+  font-family: 'Roboto';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 3px solid #285fda;
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
+}
+
+.modal-window p {
+  font-size: 16pt;
+  margin-bottom: 30px;
+}
+
+.modal-window button {
+  font-size: 14pt;
+  color: white;
+  margin: 5px;
+  padding: 10px;
+  width: 100%;
+  background-color: #285fda;
+  border-radius: 15px;
+  border: 2px solid white;
+}
+
+.modal-window button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #285fda;
+  border: 2px solid #285fda;
+}
+
+.WinXP_Desktop_Window--Content {
+  padding: 10px;
+  font-family: "Roboto";
+}
+
+.WinXP_Desktop_Window--Content p {
+  margin-top: 10px;
+  line-height: 1.6rem;
+}
 /*# sourceMappingURL=WinXP_Desktop_Window.css.map */

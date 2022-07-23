@@ -49,8 +49,14 @@ import React from 'react';
                         </div>
                     </div>
                     <div className="WinXP_Desktop_Window--Content">
-                        <h3>Hello This is a test</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h3>About this project</h3>
+                        <p>Built with React, SASS and lots of spare time, this project is a recreation of my <a href="https://sanobelk.github.io/">Javascript Windows XP Desktop Experience.</a> My Javascript rendition helped me solidify DOM manipulation, CSS, and my Javascript skills. This project was made as a refresher for CSS, to test my desgin to implementation skills, and learn more about React. It was purposely built with class based components because I was not familiar with them. I think even though it's an outdated way to build React applications (so the internet says), it is still useful to know.</p> 
+
+                        <p>I would like to expand on this project further in the future. Some plans I have for it include moveable windows, user accounts, a "web browser", files creation, and interactive applications on the desktop/start menu.</p> 
+
+                        <p>The code for this project is visible on <a href="">Github</a>.</p>
+
+                        <p>Thanks for reading!</p>
                     </div>
                 </div>
             )

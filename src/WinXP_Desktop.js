@@ -2,6 +2,7 @@ import { findAllByDisplayValue } from '@testing-library/react';
 import React from 'react';
 import {StartMenuItem} from './startMenuItem';
 import {About} from './About';
+import {Modal} from './Modal';
 
 class WinXP_Desktop extends React.Component{
     constructor(props){
@@ -128,7 +129,9 @@ class WinXP_Desktop extends React.Component{
                 resume : true,
                 startMenu : false,
                 startMenuClicked : false,
-            })}
+            })
+            
+            }
     openOther = function(){
             this.setState({
                 ...this.state,
@@ -145,13 +148,13 @@ class WinXP_Desktop extends React.Component{
     closeResume = function(){
         this.setState({
             ...this.state,
-            about : false
+            resume : false
         })
     }
     closeOther = function(){
         this.setState({
             ...this.state,
-            about : false
+            other : false
         })
     }
 
@@ -176,6 +179,7 @@ class WinXP_Desktop extends React.Component{
         <div className="WinXP_Desktop_Container">
             <div className="DesktopArea" onClick={this.checkMenuOpen}>
             {this.state.about && <About close={this.closeAbout} minimize={this.minimize}/>}
+            {this.state.resume && <Modal message={`You are being redirected to my resume. Continue?`} close={this.closeResume}/>}
             
 
             
@@ -208,7 +212,7 @@ class WinXP_Desktop extends React.Component{
             {this.state.startMenu &&
                     <div className="startMenu">
                         <div className="startMenu--Top">
-                            <p className="startMenu--Top--UserName" onClick={this.props.restartPC}>Admin</p>
+                            <p className="startMenu--Top--UserName" onClick={this.props.restartPC}>Sanobelk</p>
                         </div>
                         <div className="startMenu--Middle">
                             <div className="startMenu--Middle--Left">   

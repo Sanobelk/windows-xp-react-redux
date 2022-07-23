@@ -30,7 +30,7 @@ class LoginScreenUser extends React.Component{
                     <img id="LoginScreenUserAvatar" src="/images/icons/chess.webp" onClick={this.userClickAvatar}/>
                 </div>
                 <div className="LoginScreenUser--Middle">
-                    <p className="LoginScreenUser--Middle--AccName" onClick={this.userClickAvatar}>Admin</p>
+                    <p className="LoginScreenUser--Middle--AccName" onClick={this.userClickAvatar}>Sanobelk</p>
                     
                     {this.state.userClicked == true && 
                     <><p className="LoginScreenUser--Middle--TypePass">Type your password</p><input className="LoginScreenUser--Middle--Input" type="password"></input></> }

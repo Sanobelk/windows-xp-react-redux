@@ -7,8 +7,8 @@ class App extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            xp_loaded : false,
-            userLoggedIn : false,
+            xp_loaded : true,
+            userLoggedIn : true,
         }
         this.restartPC = this.restartPC.bind(this);
         this.startingUp = this.startingUp.bind(this);
