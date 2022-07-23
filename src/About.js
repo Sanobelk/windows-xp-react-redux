@@ -50,9 +50,9 @@ import React from 'react';
                     </div>
                     <div className="WinXP_Desktop_Window--Content">
                         <h3>About this project</h3>
-                        <p>Built with React, SASS and lots of spare time, this project is a recreation of my <a href="https://sanobelk.github.io/">Javascript Windows XP Desktop Experience.</a> My Javascript rendition helped me solidify DOM manipulation, CSS, and my Javascript skills. This project was made as a refresher for CSS, to test my desgin to implementation skills, and learn more about React. It was purposely built with class based components because I was not familiar with them. I think even though it's an outdated way to build React applications (so the internet says), it is still useful to know.</p> 
+                        <p>Built with React, SASS and lots of spare time, this project is a recreation of my <a href="https://sanobelk.github.io/" target="_blank">Javascript Windows XP Desktop Experience.</a> My Javascript rendition helped me solidify DOM manipulation, CSS, and my Javascript skills. This project was made as a refresher for CSS, to test my desgin to implementation skills, and learn more about React. It was purposely built with class based components because I was not familiar with them. I think even though it's an outdated way to build React applications (so the internet says), it is still useful to know.</p> 
 
-                        <p>I would like to expand on this project further in the future. Some plans I have for it include moveable windows, user accounts, a "web browser", files creation, and interactive applications on the desktop/start menu.</p> 
+                        <p>I would like to expand on this project further in the future. Some plans I have for it include moveable windows, a right click menu, user accounts, a "web browser", files creation, and interactive applications on the desktop/start menu.</p> 
 
                         <p>The code for this project is visible on <a href="">Github</a>.</p>
 

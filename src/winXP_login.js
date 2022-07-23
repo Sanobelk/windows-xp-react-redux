@@ -44,7 +44,7 @@ class WinXP_Login extends React.Component{
                 <div className="Login_Bottom_Bar">
                     <div className="Login_Bottom_Bar--left" onClick={this.props.restartPC}>
                         <img src="images/icons/shutoff_button.png"/>
-                        <p>Turn off computer</p>
+                        <p>Restart computer.</p>
                     </div>
                     <div className="Login_Bottom_Bar--right">
                         <p>Welcome to my in browser Windows XP Experience. I hope you enjoy it.</p>

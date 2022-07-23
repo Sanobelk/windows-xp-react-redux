@@ -188,11 +188,74 @@ html {
   background: -webkit-gradient(linear, left top, left bottom, from(#285fda), to(#1290e8));
   background: linear-gradient(#285fda, #1290e8);
   border-top: 3px solid gold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.startMenu--Bottom div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Roboto';
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.startMenu--Bottom div a {
+  color: white;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.startMenu--Bottom div img {
+  width: 50px;
+  padding-right: 5px;
 }
 
 @media screen and (max-width: 600px) {
   .startMenu {
     width: 75vw;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .startMenu--Bottom div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 15px;
+  }
+}
+
+@media screen and (max-height: 568px) {
+  .startMenu {
+    top: 50px;
+  }
+  .startMenu--Middle {
+    height: 300px;
   }
 }
 

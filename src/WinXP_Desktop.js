@@ -179,7 +179,7 @@ class WinXP_Desktop extends React.Component{
         <div className="WinXP_Desktop_Container">
             <div className="DesktopArea" onClick={this.checkMenuOpen}>
             {this.state.about && <About close={this.closeAbout} minimize={this.minimize}/>}
-            {this.state.resume && <Modal message={`You are being redirected to my resume. Continue?`} close={this.closeResume}/>}
+            {this.state.resume && <Modal message={`You are being redirected to my personal website. Continue?`} close={this.closeResume}/>}
             
 
             
@@ -236,9 +236,19 @@ class WinXP_Desktop extends React.Component{
                                 </button>
 
                             </div>
-                            <div className="startMenu--Middle--Right" onClick={()=> console.log(this.state)}>right</div>
+                            <div className="startMenu--Middle--Right" onClick={()=> console.log(this.state)}></div>
                         </div>
-                        <div className="startMenu--Bottom"></div>
+                        <div className="startMenu--Bottom">
+                            <div>
+                             
+                            <a href="tel:9172134254"><img src="./images/icons/phone.png"></img>Call</a></div>
+                            <div>
+                            <a href="https://www.github.com/sanobelk" target="_blank"><img src="./images/icons/github.png"></img>Github</a>
+                            </div>
+                            <div onClick={this.props.restartPC}>
+                            <img src="./images/icons/exit.png"></img> 
+                            <p>Restart</p></div>
+                        </div>
                     </div>
                 }
         </div>
